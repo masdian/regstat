@@ -37,7 +37,7 @@ valueBox(
   value = paste(format(7000, big.mark = " "), "", sep = " "),
   caption = "Mahasiswa Laki-Laki",
   icon = "fas fa-male",
-  color = "purple"
+  color = "blue"
 )
 ```
 
@@ -45,12 +45,10 @@ valueBox(
 
 ```{r}
 valueBox(
-  value = paste(format(5000, big.mark = " "), " (", 
-                round(1, 0), "%)",
-                sep = ""),
+  value = paste(format(5000, big.mark = " "), "", sep = " "),
   caption = "Mahasiswa Perempuan",
   icon = "fas fa-female",
-  color = "blue"
+  color = "pink"
 )
 ```
 
@@ -66,6 +64,18 @@ valueBox(
 )
 ```
 
+### tendik {.value-box}
+
+```{r}
+#sudah <- nrow(filter(db, registrasi == "registrasi"))
+valueBox(
+  value = paste(format(1000, big.mark = " "), "", sep = " "),
+  caption = "Tenaga Kependidikan",
+  icon = "fas fa-thumbs-up",
+  color = "green"
+)
+```
+
 
 Row
 ---
@@ -74,15 +84,15 @@ Row
 
 Berikut adalah laporan semester Subbagian Registrasi dan Statisik.
 
-- 2020-2021 [Ganjil](https://202101.netlify.app){target="_blank"} Genap
-- 2019-2020 Ganjil [Genap](https://192002.netlify.app){target="_blank"}
+- 2020-2021 [Ganjil](https://202101.netlify.app){target="_blank"} - Genap
+- 2019-2020 Ganjil - [Genap](https://192002.netlify.app){target="_blank"}
 
 ### **Penerimaan Mahasiswa Baru**
 
 Berikut adalah laporan penerimaan mahasiswa baru.
 
-- 2020 [SNMPTN](https://pmb20.netlify.app){target="_blank"} [SBMPTN](https://sbm20.netlify.app){target="_blank"} SMMPTN UMM Da
-- 2019
+- 2020 [SNMPTN](https://pmb20.netlify.app){target="_blank"} - [SBMPTN](https://sbm20.netlify.app){target="_blank"} - SMMPTN - UMM D3
+- 2019 SNMPTN - SBMPTN - SMMPTN - UMM D3
 
 Tentang Kami
 ===
