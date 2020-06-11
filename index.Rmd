@@ -113,7 +113,29 @@ k. melakukan penyusunan laporan Subbagian.
 
 Subbagian Registrasi dan Statistik dikoordinasi oleh seorang Kepala Subbagian dan dibantu oleh 3 orang staf. Berikut adalah sumber daya manusia di Subbagian Registrasi dan Statistik.
 
-1. Munawar Holil, S.E. (Kepala Subbagian)
-2. Sriyanto (Staf)
-3. Riana Hadiana (Staf)
-4. Sri Fuji Astuti (Staf)
+Row
+---
+
+### Munawar Holil, S.E. (Kepala Subbagian)
+
+```{r  out.width = "50%", out.height = "50%"}
+knitr::include_graphics("image/Al Pacino.jpg") 
+```
+ 
+### Sriyanto (Staf)
+
+```{r  out.width = "50%", out.height = "50%"}
+knitr::include_graphics("image/keanu reeves.jpg") 
+```
+
+### Riana Hadiana (Staf)
+
+```{r  out.width = "50%", out.height = "50%"}
+knitr::include_graphics("image/reus.jpg") 
+```
+
+### Sri Fuji Astuti (Staf)
+
+```{r  out.width = "50%", out.height = "50%"}
+knitr::include_graphics("image/hijab.jpg") 
+```
