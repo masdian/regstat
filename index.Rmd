@@ -7,8 +7,20 @@ output:
     vertical_layout: scroll
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=F, warning=F}
 library(flexdashboard)
+library(tidyverse)
+aktif <- read.csv("G:/My Drive/Dian/R/Bookdown/turunbuku/static/aktif.csv")
+aktif[is.na(aktif)] <- 0
+aktif <- sum(aktif[,-1])
+
+sdm <- read.csv("G:/My Drive/Dian/R/Bookdown/turunbuku/static/SDM.csv")
+dosen <- sdm %>%
+  filter(STATUS == "Dosen PNS" | STATUS == "Dosen TKK")
+dosen <- nrow(dosen)
+tendik <- sdm %>%
+  filter(STATUS == "Tendik PNS" | STATUS == "Tendik Non PNS")
+tendik <- nrow(tendik)
 ```
 
 Home
@@ -22,7 +34,7 @@ Row
 ```{r}
 
 valueBox(
-  value = paste(format(16250, big.mark = " "), "", sep = " "),
+  value = paste(format(aktif, big.mark = " "), "", sep = " "),
   caption = "Mahasiswa Aktif",
   icon = "fas fa-clipboard-check",
   color = "black"
@@ -34,7 +46,7 @@ valueBox(
 ```{r}
 
 valueBox(
-  value = paste(format(7000, big.mark = " "), "", sep = " "),
+  value = paste(format(6269, big.mark = " "), "", sep = " "),
   caption = "Mahasiswa Laki-Laki",
   icon = "fas fa-male",
   color = "blue"
@@ -45,7 +57,7 @@ valueBox(
 
 ```{r}
 valueBox(
-  value = paste(format(5000, big.mark = " "), "", sep = " "),
+  value = paste(format(10100, big.mark = " "), "", sep = " "),
   caption = "Mahasiswa Perempuan",
   icon = "fas fa-female",
   color = "pink"
@@ -57,7 +69,7 @@ valueBox(
 ```{r}
 #sudah <- nrow(filter(db, registrasi == "registrasi"))
 valueBox(
-  value = paste(format(1000, big.mark = " "), "", sep = " "),
+  value = paste(format(dosen, big.mark = " "), "", sep = " "),
   caption = "Dosen Aktif",
   icon = "fas fa-thumbs-up",
   color = "green"
@@ -69,7 +81,7 @@ valueBox(
 ```{r}
 #sudah <- nrow(filter(db, registrasi == "registrasi"))
 valueBox(
-  value = paste(format(1000, big.mark = " "), "", sep = " "),
+  value = paste(format(tendik, big.mark = " "), "", sep = " "),
   caption = "Tenaga Kependidikan",
   icon = "fas fa-thumbs-up",
   color = "green"
@@ -113,42 +125,47 @@ Berdasarkan Surat Pemberitahuan tentang Komitmen Untirta pada Masa Pandemi Covid
 
     b. **Perpanjangan pembayaran**. Bagi orang tua/mahasiswa yang belum dapat melakukan pembayaran UKT karena dana belum mencukupi, maka dapat melakukan pengajuan perpanjangan, yang mana waktu dan tanggal akan ditentukan oleh bagian keuangan dan harus sudah terlunasi **sebelum pelaksanaan UAS**
 
-    c. **Penyesuaian UKT**. Bagi orang tua/mahasiswa yang belum dapat melakukan pembayaran UKT dalam periode pembayaran yang dijadwalkan karena terkena **PHK** atau **pensiun** maka dapat mengajukan permohonan pengajuan penyesuaian UKT sesuai mekanisme yang berlaku. Apabila disetujui, **penurunan UKT bagi yang terkena PHK hanya berlaku pada semester Ganjil tahun ajaran 2020/2021** dan akan kembali lagi ke UKT semula pada semester berikutnya
+    c. **Penyesuaian UKT**. Bagi mahasiswa yang belum dapat melakukan pembayaran UKT dalam periode pembayaran yang dijadwalkan karena orang tua terkena **PHK**, **pensiun**, atau **sedang dirawat karena Covid-19** maka dapat mengajukan permohonan pengajuan penyesuaian UKT sesuai mekanisme yang berlaku. Apabila disetujui, **penurunan UKT bagi yang terkena PHK hanya berlaku pada semester Ganjil tahun ajaran 2020/2021** dan akan kembali lagi ke UKT semula pada semester berikutnya
 
 3. Sesuai dengan SK Rektor Nomor 6/UN43/KPT.TM.01.04/2020 perihal Biaya Kuliah Bagi Yatim dan Yatim Piatu dapat diberlakukan bagi mahasiswa apabila **Ayah meninggal** (Yatim) atau **Ayah dan Ibu meninggal** (Yatim Piatu) dapat mengajukan biaya kuliah sama dengan UKT golongan K3 dengan catatan ibu kandung tidak menikah lagi.
 
 ### **Pendaftaran**
 
-Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberitahuan nomor T/445/UN43/KU.00.01/2020 bisa melakukan pengajuan sedara *online*. Pengisian formulir **wajib** menggunakan email Untirta (**nim_mahasiswa@untirta.ac.id**). Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id
+Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberitahuan nomor T/445/UN43/KU.00.01/2020 bisa melakukan pengajuan secara *online* mulai dari **15 Juni - 03 Juli 2020**. Pengisian formulir **wajib** menggunakan email Untirta (**nim_mahasiswa@untirta.ac.id**). Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id
 
 Berikut adalah persyaratan-persyaratan yang harus dilengkapi.
 
 1. **Menunda pembarayan/Perpanjangan Pembayaran**
 
-    a. Surat permohonan dari orang tua yang berisi kepastian tanggal akan membayar UKT (format pdf)
-    b. Kartu Tanda Mahasiwa (format jpg)
-    c. Kartu Keluarga (format pdf)
-    d. Setelah persyaratan a - c lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdEm4szZhgay61yOTdsaCWWGIW6gChpHyzKFVu6RdKMao2z1Q/viewform){target="_blank"}
+    a. Mahasiswa semua angkatan
+    b. Surat permohonan bermaterai 6000 dari orang tua yang berisi kepastian tanggal akan membayar UKT (format pdf)
+    c. Kartu Tanda Mahasiwa (format jpg)
+    d. Kartu Keluarga (format pdf)
+    e. Setelah persyaratan b - d lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdEm4szZhgay61yOTdsaCWWGIW6gChpHyzKFVu6RdKMao2z1Q/viewform){target="_blank"}
 
 $~$
 
 2. **Penyesuaian UKT (PHK dan Pensiun)**
 
-    a. Surat PHK/Diberhentikan/Pensiun (format pdf)
-    b. Kartu Tanda Mahasiwa (format jpg)
-    c. Bukti Pembayaran UKT/SPP semester berjalan (format pdf)
-    d. Kartu Keluarga (format pdf)
-    e. Setelah persyaratan a - d lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdI8Ooa5Qlszp7XkuEUN4_On_TGoS7QI_Sg-tgz8OT_ut2ZWw/viewform){target="_blank"}
-
+    a. Mahasiswa angkatan 2019 dan sebelumnya
+    b. Surat PHK/Diberhentikan/Pensiun atau Surat Keterangan dirawat dari RS (format pdf)
+    c. Kartu Tanda Mahasiwa (format jpg)
+    d. Bukti Pembayaran UKT/SPP semester berjalan (format pdf)
+    e. Kartu Keluarga (format pdf)
+    f. Mengisi surat pernyataan keabsahan data yang ditandatangani orang tua. Format surat bisa diunduh [**di sini**](https://drive.google.com/file/d/1P3x9j_mksqUY_yHZfTErh_ElSkAqrzWJ/view?usp=sharing){target="_blank"}
+    g. Setelah persyaratan b - f lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdI8Ooa5Qlszp7XkuEUN4_On_TGoS7QI_Sg-tgz8OT_ut2ZWw/viewform){target="_blank"}
+    
 $~$
 
 3. **Yatim atau Yatim Piatu**
   
-    a. Surat Keterangan Kematian (format pdf)
-    b. Kartu Tanda Mahasiwa (format jpg)
-    c. Bukti Pembayaran UKT/SPP semester berjalan (format pdf)
-    d. Kartu Keluarga (format pdf)
-    e. Setelah persyaratan a - d lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLScqurvhU869iAcAvh--fOj-G_sfl5cyzlnLulS-9JVfSLQypg/viewform){target="_blank"}
+    a. Mahasiswa angkatan 2019 dan sebelumnya
+    b. Surat Keterangan Kematian (format pdf)
+    c. Kartu Tanda Mahasiwa (format jpg)
+    d. Bukti Pembayaran UKT/SPP semester berjalan (format pdf)
+    e. Kartu Keluarga (format pdf)
+    f. Mengisi surat pernyataan keabsahan data yang ditandatangani orang tua. Format surat bisa diunduh [**di sini**](https://drive.google.com/file/d/1P3x9j_mksqUY_yHZfTErh_ElSkAqrzWJ/view?usp=sharing){target="_blank"}
+    g. Setelah persyaratan b - f lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLScqurvhU869iAcAvh--fOj-G_sfl5cyzlnLulS-9JVfSLQypg/viewform){target="_blank"}
 
 
 
