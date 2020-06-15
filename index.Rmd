@@ -131,7 +131,11 @@ Berdasarkan Surat Pemberitahuan tentang Komitmen Untirta pada Masa Pandemi Covid
 
 ### **Pendaftaran (15 Juni - 03 Juli 2020)**
 
-Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberitahuan nomor T/445/UN43/KU.00.01/2020 bisa melakukan pengajuan secara *online* mulai dari **15 Juni - 03 Juli 2020**. Pengisian formulir **wajib** menggunakan email Untirta (**nim_mahasiswa@untirta.ac.id**). Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id
+Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberitahuan nomor T/445/UN43/KU.00.01/2020 bisa melakukan pengajuan secara *online* mulai dari **15 Juni - 03 Juli 2020**. Pengisian formulir **wajib** menggunakan email Untirta. 
+
+>Jika NIM=**1234567890**, maka emailnya adalah **1234567890@untirta.ac.id**. 
+
+Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id
 
 Berikut adalah persyaratan-persyaratan yang harus dilengkapi.
 
