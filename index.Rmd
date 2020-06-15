@@ -109,33 +109,34 @@ Berdasarkan Surat Pemberitahuan tentang Komitmen Untirta pada Masa Pandemi Covid
 
 2. Memperhatikan kesepakatan Majelis Rektor Perguruan Tinggi Negeri (MRPTN) bagi mahasiswa yang terdampak pandemi untuk mengatasi UKT, terdapat beberapa kebijakan yang akan diberlakukan, di antaranya:
 
-    a. **Menunda Pembayaran**. Bagi orang tua/mahasiswa yang belum dapat membayar UKT dalam periode pembayaran yang dijadwalkan, dapat mengajukan penundaan pembayaran sesuai mekanisme yang berlaku. Apabila disetujui maka pembayaran dapat dilakukan pada periode pembayaran susulan yang ditetapkan hingga masa sebelum pelaksanaan Ujian Akhir Semester (UAS)
+    a. **Menunda Pembayaran**. Bagi orang tua/mahasiswa yang belum dapat membayar UKT dalam periode pembayaran yang dijadwalkan, dapat mengajukan penundaan pembayaran sesuai mekanisme yang berlaku. Apabila disetujui maka pembayaran dapat dilakukan pada periode pembayaran susulan yang ditetapkan hingga masa **sebelum pelaksanaan Ujian Akhir Semester (UAS)**
 
-    b. **Perpanjangan pembayaran**. Bagi orang tua/mahasiswa yang belum dapat melakukan pembayaran UKT karena dana belum mencukupi, maka dapat melakukan pengajuan perpanjangan, yang mana waktu dan tanggal akan ditentukan oleh bagian keuangan dan harus sudah terlunasi sebelum pelaksanaan UAS.
+    b. **Perpanjangan pembayaran**. Bagi orang tua/mahasiswa yang belum dapat melakukan pembayaran UKT karena dana belum mencukupi, maka dapat melakukan pengajuan perpanjangan, yang mana waktu dan tanggal akan ditentukan oleh bagian keuangan dan harus sudah terlunasi **sebelum pelaksanaan UAS**
 
-    c. **Penyesuaian UKT**. Bagi orang tua/mahasiswa yang belum dapat melakukan pembayaran UKT dalam periode pembayaran yang dijadwalkan karena terkena PHK maka dapat mengajukan permohonan pengajuan penyesuaian UKT sesuai mekanisme yang berlaku. Apabila disetujui, penurunan UKT hanya berlaku pada semester Ganjil tahun ajaran 2020/2021 dan akan kembali lagi ke UKT semula pada semester berikutnya.
+    c. **Penyesuaian UKT**. Bagi orang tua/mahasiswa yang belum dapat melakukan pembayaran UKT dalam periode pembayaran yang dijadwalkan karena terkena **PHK** atau **pensiun** maka dapat mengajukan permohonan pengajuan penyesuaian UKT sesuai mekanisme yang berlaku. Apabila disetujui, **penurunan UKT bagi yang terkena PHK hanya berlaku pada semester Ganjil tahun ajaran 2020/2021** dan akan kembali lagi ke UKT semula pada semester berikutnya
 
 3. Sesuai dengan SK Rektor Nomor 6/UN43/KPT.TM.01.04/2020 perihal Biaya Kuliah Bagi Yatim dan Yatim Piatu dapat diberlakukan bagi mahasiswa apabila **Ayah meninggal** (Yatim) atau **Ayah dan Ibu meninggal** (Yatim Piatu) dapat mengajukan biaya kuliah sama dengan UKT golongan K3 dengan catatan ibu kandung tidak menikah lagi.
 
 ### **Pendaftaran**
 
-Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberitahuan nomor T/445/UN43/KU.00.01/2020 bisa melakukan pengajuan dengan mengiisi formulir pendaftaran yang bisa diunduh **di sini**, kemudian melengkapi persyaratan-persyaratan berikut.
+Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberitahuan nomor T/445/UN43/KU.00.01/2020 bisa melakukan pengajuan sedara *online*. Pengisian formulir **wajib** menggunakan email Untirta (**nim_mahasiswa@untirta.ac.id**). Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id
+
+Berikut adalah persyaratan-persyaratan yang harus dilengkapi.
 
 1. **Menunda pembarayan/Perpanjangan Pembayaran**
 
-    a. Bukti penghasilan orang tua terbaru (format pdf)
+    a. Surat permohonan dari orang tua yang berisi kepastian tanggal akan membayar UKT (format pdf)
     b. Kartu Tanda Mahasiwa (format jpg)
-    c. Bukti Pembayaran UKT/SPP semester berjalaan (format pdf)
-    d. Kartu Keluarga (format pdf)
-    e. Setelah persyaratan a - d lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdEm4szZhgay61yOTdsaCWWGIW6gChpHyzKFVu6RdKMao2z1Q/viewform){target="_blank"}
+    c. Kartu Keluarga (format pdf)
+    d. Setelah persyaratan a - c lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdEm4szZhgay61yOTdsaCWWGIW6gChpHyzKFVu6RdKMao2z1Q/viewform){target="_blank"}
 
 $~$
 
-2. **Penyesuaian UKT (PHK san Pensiun)**
+2. **Penyesuaian UKT (PHK dan Pensiun)**
 
     a. Surat PHK/Diberhentikan/Pensiun (format pdf)
     b. Kartu Tanda Mahasiwa (format jpg)
-    c. Bukti Pembayaran UKT/SPP semester berjalaan (format pdf)
+    c. Bukti Pembayaran UKT/SPP semester berjalan (format pdf)
     d. Kartu Keluarga (format pdf)
     e. Setelah persyaratan a - d lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLSdI8Ooa5Qlszp7XkuEUN4_On_TGoS7QI_Sg-tgz8OT_ut2ZWw/viewform){target="_blank"}
 
@@ -145,7 +146,7 @@ $~$
   
     a. Surat Keterangan Kematian (format pdf)
     b. Kartu Tanda Mahasiwa (format jpg)
-    c. Bukti Pembayaran UKT/SPP semester berjalaan (format pdf)
+    c. Bukti Pembayaran UKT/SPP semester berjalan (format pdf)
     d. Kartu Keluarga (format pdf)
     e. Setelah persyaratan a - d lengkap, lakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLScqurvhU869iAcAvh--fOj-G_sfl5cyzlnLulS-9JVfSLQypg/viewform){target="_blank"}
 
