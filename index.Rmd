@@ -106,7 +106,10 @@ Berikut adalah laporan penerimaan mahasiswa baru.
 - 2020 [SNMPTN](https://pmb20.netlify.app){target="_blank"} - [SBMPTN](https://sbm20.netlify.app){target="_blank"} - SMMPTN - UMM D3
 - 2019 SNMPTN - SBMPTN - SMMPTN - UMM D3
 
+UKT
+===
 
+Under construction
 
 Tentang Kami
 ===
