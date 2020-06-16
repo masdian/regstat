@@ -208,25 +208,25 @@ Subbagian Registrasi dan Statistik dikoordinasi oleh seorang Kepala Subbagian da
 Row
 ---
 
-### Munawar Holil, S.E. (Kepala Subbagian)
+### [Munawar Holil, S.E. (Kepala Subbagian)](https://api.whatsapp.com/send?phone=6287771710236){target="_blank"}
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/Al Pacino.jpg") 
 ```
  
-### Sriyanto (Staf)
+### [Sriyanto (Staf)](https://api.whatsapp.com/send?phone=6285888504977){target="_blank"}
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/keanu reeves.jpg") 
 ```
 
-### Riana Hadiana (Staf)
+### [Riana Hadiana (Staf)](https://api.whatsapp.com/send?phone=628111072357){target="_blank"}
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/reus.jpg") 
 ```
 
-### Sri Fuji Astuti (Staf)
+### [Sri Fuji Astuti (Staf)](https://api.whatsapp.com/send?phone=6287880183029){target="_blank"}
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/hijab.jpg") 
