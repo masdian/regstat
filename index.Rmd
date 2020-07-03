@@ -142,7 +142,7 @@ Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada surat pemberi
 
 >Jika NIM=**1234567890**, maka emailnya adalah **1234567890@untirta.ac.id**. 
 
-Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id
+Untuk mengetahui password email masing-masing bisa menghubungi registrasi@untirta.ac.id di hari dan jam kerja (**Senin s.d Jumat pukul 08:00 - 16.30**)
 
 Berikut adalah persyaratan-persyaratan yang harus dilengkapi.
 
