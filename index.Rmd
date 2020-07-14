@@ -9,6 +9,7 @@ output:
 
 ```{r setup, include=FALSE, message=F, warning=F}
 library(flexdashboard)
+Sys.setlocale("LC_TIME", "IND")
 library(tidyverse)
 aktif <- read.csv("G:/My Drive/Dian/R/Bookdown/turunbuku/static/aktif.csv")
 aktif[is.na(aktif)] <- 0
@@ -109,6 +110,8 @@ Berikut adalah laporan penerimaan mahasiswa baru.
 UKT
 ===
 
+Row
+---
 ### **Kebijakan UKT Terbaru**
 
 Berdasarkan Peraturan Rektor Nomor 6 Tahun 2020 tentang Keringanan, Pembebasan, Penurunan Kelompok, dan Penundaan Pembayaran Uang Kuliah di Lingkungan Universitas Sultan Ageng Tirtayasa yang diberikan kepada mahasiswa program sarjana dan diploma yang mengajukan permohonan dengan mengisi dan melengkapi formulir berikut.
@@ -234,6 +237,150 @@ $~$
     c. Surat keterangan kepala desa sesuai domisili orang tua yang menyatakan bahwa orang tua/wali mengalami kesulitan ekonomi
     d. Mengisi surat pernyataan keabsahan data yang ditandatangani orang tua/wali. Format surat bisa diunduh [**di sini**](https://drive.google.com/file/d/1P3x9j_mksqUY_yHZfTErh_ElSkAqrzWJ/view?usp=sharing){target="_blank"}
     e. Melakukan pendaftaran secara *online* [**di sini**](https://docs.google.com/forms/d/e/1FAIpQLScepkPnjTixJZTz0fjsR-dIMT8wNmGz4t4v9Wtf2QjrMecx0A/viewform){target="_blank"} dengan mengunggah berkas pada **poin a - d**
+
+Row
+---
+### **Rekapitulasi Pemohon Penyesuaian UKT**
+
+Berikut adalah rekapitulasi pemohon penyesuaian UKT sampai dengan `r format(Sys.time(), "%d %B %Y")` pukul `r format(Sys.time(), "%H:%M")` di mana
+
+- **a01** adalah pengajuan Keringanan UKT sebesar 50% (Formulir Baru)
+- **a02** adalah pengajuan Pembebasan UKT (Formulir Baru)
+- **a03** adalah pengajuan Penurunan Kelompok UKT per Semester (Formulir Baru)
+- **a04** adalah pengajuan Penurunan Kelompok UKT Permanen (Formulir Baru)
+- **a05** adalah pengajuan Penurunan Kelompok UKT bagi Yatim (Formulir Baru)
+- **a06** adalah pengajuan Penundaan Pembayaran UKT (Formulir Baru)
+- **a07** adalah pengajuan Penundaan Pembayaran UKT (Formulir Lama)
+- **a08** adalah pengajuan Penyesuaian UKT karena PHK, Pensiun, dirawat karena Covid-19 (Formulir Lama)
+- **a09** adalah pengajuan Penyesuaian UKT karena mengalami Penurunan penghasilan di masa Covid-19 (Formulir Lama)
+- **a10** adalah pengajuan Penurunan UKT bagi Yatim (Formulir Lama)
+- **a11** adalah pengajuan Pembebasan UKT mahasiswa yang akan sidang maksimal 01 Oktober 2020
+
+> **Formulir Baru** berdasarkan Peraturan Rektor Nomor 6 Tahun 2020, **Formulir Lama** berdasarkan Surat Pemberitahuan nomor T/445/UN43/KU.00.01/2020
+
+```{r, warning=FALSE, message=FALSE}
+library(googlesheets4)
+gs4_deauth()
+## 01 Keringanan
+data <- NULL
+keringanan <- "https://docs.google.com/spreadsheets/d/1e7scNFAYs_4Ly7ZOB9ErB8-53wiRZvgfDMCX-Ig9Wwc/edit?usp=sharing"
+data1 <- data.frame(read_sheet(keringanan))
+data1 <- data1[, 2:3]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a01'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+## 02 Pembebasan
+
+pembebasan <- "https://docs.google.com/spreadsheets/d/1WcrUIj25lVAYL2cffvUH1EvC1AZY25HySq3M2FRAA-4/edit?usp=sharing"
+data1 <- data.frame(read_sheet(pembebasan))
+data1 <- data1[,2:3]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a02'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 03 per semester
+
+persemester <- "https://docs.google.com/spreadsheets/d/1Z5flVIcvvwJOf4T_07tFVTs-RBo7Y_f66hqkO4_gGEA/edit?usp=sharing"
+data1 <- data.frame(read_sheet(persemester))
+data1 <- data1[,2:3]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a03'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 04 Permanen
+permanen <- 'https://docs.google.com/spreadsheets/d/13oxZevNQ7YAtmHjO2e30L19B-lln3_TwjW1eq4b7VBs/edit?usp=sharing'
+data1 <- data.frame(read_sheet(permanen))
+data1 <- data1[,2:3]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a04'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 05 Yatim
+yatim <- 'https://docs.google.com/spreadsheets/d/1gk6nmTSkogXJ2jWrXCBEE46u-mdcI4ZhCm4XF9r6Z-I/edit?usp=sharing'
+data1 <- data.frame(read_sheet(yatim))
+data1 <- data1[,2:3]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a05'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 06 Tunda
+tunda <- 'https://docs.google.com/spreadsheets/d/1M6mQXMPoNLcgDPfeL5KBlNFSJSuZ2huXqbhWDbnCdK0/edit?usp=sharing'
+data1 <- data.frame(read_sheet(tunda))
+data1 <- data1[,2:3]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a06'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 01 Tunda lama
+tunda_old <- 'https://docs.google.com/spreadsheets/d/13w0yBo7ajhyPZKaxpmqTmlOd7ogWpeY661jr7lpXD8I/edit?usp=sharing'
+data1 <- data.frame(read_sheet(tunda_old))
+data1 <- data1[,3:4]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a07'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 02 Penyesuaian lama
+penyesuaian <- 'https://docs.google.com/spreadsheets/d/1VUPtlZY1Sf7s5sUjEZuMIndKsKen-2Qa8wtufgFC9hM/edit?usp=sharing'
+data1 <- data.frame(read_sheet(penyesuaian))
+data1 <- data1[,3:4]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a08'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 03 Penghasilan Menurun
+drop_inc <- 'https://docs.google.com/spreadsheets/d/1YjUXcWdoZ25YGuCrUsYixM9bKHJ-iAgqqOdQqhOxivg/edit?usp=sharing'
+data1 <- data.frame(read_sheet(drop_inc))
+data1 <- data1[, 3:4]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a09'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## 04 Yatim lama
+yatim_old <- 'https://docs.google.com/spreadsheets/d/1mHuUBDqvLihfXnz9QEV0R1_6VxrYXhZIba3hstiPdoU/edit?usp=sharing'
+data1 <- data.frame(read_sheet(yatim_old))
+data1 <- data1[,3:4]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a10'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+## Siap sidang
+sidang <- 'https://docs.google.com/spreadsheets/d/1TX0U83vN9uPdyqZ9EcHl13RdRMmaRVVbO1Lkq5TZRzw/edit?usp=sharing'
+data1 <- data.frame(read_sheet(sidang))
+data1 <- data1[, 3:4]
+names(data1) <- c('NIM', 'Nama')
+data1$Ajuan <- 'a11'
+data1 <- unique(data1)
+data <- rbind(data, data1)
+
+data <- data[, c(1, 3)]
+data$jml <- 1
+library(tidyr)
+
+rekap <- data %>%
+  pivot_wider(names_from = 'Ajuan', values_from = 'jml', 
+              values_fn = sum)
+rekap$ajuan <- 11 - rowSums(is.na(rekap))
+
+rekap <- arrange(rekap, desc(ajuan))
+rekap[is.na(rekap)] <- 0
+rekap <- data.frame(rekap)
+
+names(rekap) <- c("NIM", "a01", "a02", "a03", "a04", "a05", "a06", "a07", "a08", "a09", "a10", "a11", "Total Ajuan")
+DT::datatable(rekap,
+              rownames = F)
+
+```
+
 
 
 
