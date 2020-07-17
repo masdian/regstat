@@ -242,7 +242,7 @@ Row
 ---
 ### **Rekapitulasi Pemohon Penyesuaian UKT**
 
-Berikut adalah rekapitulasi pemohon penyesuaian UKT sampai dengan `r format(Sys.time(), "%d %B %Y")` pukul `r format(Sys.time(), "%H:%M")` di mana
+Berikut adalah **rekapitulasi akhir** pemohon penyesuaian UKT di mana
 
 - **a01** adalah pengajuan Keringanan UKT sebesar 50% (Formulir Baru)
 - **a02** adalah pengajuan Pembebasan UKT (Formulir Baru)
