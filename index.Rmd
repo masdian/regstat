@@ -171,7 +171,7 @@ $~$
 
 > **Setiap mahasiswa hanya dapat memohonkan satu bentuk penyesuaian UKT. Lebih dari satu permohonan tidak akan ditindaklanjuti**
 
-Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada Peraturan Rektor Nomor 6 Tahun 2020 bisa melakukan pengajuan secara *online* sampai dengan **17 Juli 2020**. Pengisian formulir **wajib** menggunakan email Untirta. Cara pengisian formulir dengan email untirta bisa dilihat [**di sini**](https://youtu.be/RpN3maGbh7M){target="_blank"}
+Bagi mahasiswa Untirta yang memenuhi kriteria seperti tertera pada Peraturan Rektor Nomor 6 Tahun 2020 bisa melakukan pengajuan secara *online* sampai dengan **17 Juli 2020 pukul 17:00**. Pengisian formulir **wajib** menggunakan email Untirta. Cara pengisian formulir dengan email untirta bisa dilihat [**di sini**](https://youtu.be/RpN3maGbh7M){target="_blank"}
 
 >Jika NIM=**1234567890**, maka emailnya adalah **1234567890@untirta.ac.id** 
 
