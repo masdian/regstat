@@ -112,6 +112,7 @@ UKT
 
 Row
 ---
+
 ### **Rekapitulasi Pemohon Penyesuaian UKT**
 
 Berikut adalah **rekapitulasi akhir** pemohon penyesuaian UKT di mana
@@ -142,18 +143,14 @@ gs4_deauth()
 data <- NULL
 keringanan <- "https://docs.google.com/spreadsheets/d/1e7scNFAYs_4Ly7ZOB9ErB8-53wiRZvgfDMCX-Ig9Wwc/edit?usp=sharing"
 data1 <- data.frame(read_sheet(keringanan))
-data1 <- data1[, 2:3]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a01'
+data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a01")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 ## 02 Pembebasan
 
 pembebasan <- "https://docs.google.com/spreadsheets/d/1WcrUIj25lVAYL2cffvUH1EvC1AZY25HySq3M2FRAA-4/edit?usp=sharing"
 data1 <- data.frame(read_sheet(pembebasan))
-data1 <- data1[,2:3]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a02'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a02")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
@@ -161,85 +158,66 @@ data <- rbind(data, data1)
 
 persemester <- "https://docs.google.com/spreadsheets/d/1Z5flVIcvvwJOf4T_07tFVTs-RBo7Y_f66hqkO4_gGEA/edit?usp=sharing"
 data1 <- data.frame(read_sheet(persemester))
-data1 <- data1[,2:3]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a03'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a03")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 04 Permanen
 permanen <- 'https://docs.google.com/spreadsheets/d/13oxZevNQ7YAtmHjO2e30L19B-lln3_TwjW1eq4b7VBs/edit?usp=sharing'
 data1 <- data.frame(read_sheet(permanen))
-data1 <- data1[,2:3]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a04'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a04")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 05 Yatim
 yatim <- 'https://docs.google.com/spreadsheets/d/1gk6nmTSkogXJ2jWrXCBEE46u-mdcI4ZhCm4XF9r6Z-I/edit?usp=sharing'
 data1 <- data.frame(read_sheet(yatim))
-data1 <- data1[,2:3]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a05'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a05")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 06 Tunda
 tunda <- 'https://docs.google.com/spreadsheets/d/1M6mQXMPoNLcgDPfeL5KBlNFSJSuZ2huXqbhWDbnCdK0/edit?usp=sharing'
 data1 <- data.frame(read_sheet(tunda))
-data1 <- data1[,2:3]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a06'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a06")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 01 Tunda lama
 tunda_old <- 'https://docs.google.com/spreadsheets/d/13w0yBo7ajhyPZKaxpmqTmlOd7ogWpeY661jr7lpXD8I/edit?usp=sharing'
 data1 <- data.frame(read_sheet(tunda_old))
-data1 <- data1[,3:4]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a07'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan ="a07")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 02 Penyesuaian lama
 penyesuaian <- 'https://docs.google.com/spreadsheets/d/1VUPtlZY1Sf7s5sUjEZuMIndKsKen-2Qa8wtufgFC9hM/edit?usp=sharing'
 data1 <- data.frame(read_sheet(penyesuaian))
-data1 <- data1[,3:4]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a08'
+data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a08")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 03 Penghasilan Menurun
 drop_inc <- 'https://docs.google.com/spreadsheets/d/1YjUXcWdoZ25YGuCrUsYixM9bKHJ-iAgqqOdQqhOxivg/edit?usp=sharing'
 data1 <- data.frame(read_sheet(drop_inc))
-data1 <- data1[, 3:4]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a09'
+data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a09")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## 04 Yatim lama
 yatim_old <- 'https://docs.google.com/spreadsheets/d/1mHuUBDqvLihfXnz9QEV0R1_6VxrYXhZIba3hstiPdoU/edit?usp=sharing'
 data1 <- data.frame(read_sheet(yatim_old))
-data1 <- data1[,3:4]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a10'
+data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a10")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
 ## Siap sidang
 sidang <- 'https://docs.google.com/spreadsheets/d/1TX0U83vN9uPdyqZ9EcHl13RdRMmaRVVbO1Lkq5TZRzw/edit?usp=sharing'
 data1 <- data.frame(read_sheet(sidang))
-data1 <- data1[, 3:4]
-names(data1) <- c('NIM', 'Nama')
-data1$Ajuan <- 'a11'
+data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a11")
 data1 <- unique(data1)
 data <- rbind(data, data1)
 
-data <- data[, c(1, 3)]
 data$jml <- 1
 
 rekap <- data %>%
@@ -256,9 +234,12 @@ DT::datatable(rekap,
               rownames = F)
 ```
 
-$~$
 
-Berikut adalah rekapitulasi pemohon penyesuaian UKT berdasarkan Fakultas dan kategori pengajuan.
+
+Row
+---
+
+### **Rekapitulasi pemohon penyesuaian UKT berdasarkan Fakultas dan kategori pengajuan**
 
 ```{r}
 kode <- data.frame(kode = c(11, 22, 33, 44, 55, 66, 77, 88, 34),
@@ -283,6 +264,13 @@ kable(db) %>%
 
 ```
 
+### **Tanggal-Tanggal Penting Proses Penyesuaian UKT**
+
+1. Batas waktu pengajuan: **17 Juli 2020**
+2. Verifikasi tingkat fakultas: **17 s.d 23 Juli 2020**
+3. Unggah hasil verifikasi di website Untirta: **24 Juli 2020**
+4. Batas waktu pengajuan Keberatan dari mhs: **27 Juli 2020**
+5. Penetapan melalui SK Rektor: **10 Agustus 2020 (maksimum)**
 
 
 
