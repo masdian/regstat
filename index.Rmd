@@ -272,6 +272,8 @@ kable(db) %>%
 4. Batas waktu pengajuan Keberatan dari mhs: **27 Juli 2020**
 5. Penetapan melalui SK Rektor: **10 Agustus 2020 (maksimum)**
 
+Diinformasikan bahawa proses penyesuaian UKT mengalami perubahan. Semula batas waktu pengajuan hingga **17 Juli 2020 pukul 16.00** diperpanjang menjadi **17 Juli 2020 pukul 23.59**, sehingga pengiriman data ke Fakultas baru terealisasi pada hari Senin tanggal **20 Juli 2020**. Dengan demikian, belum ada tanggal pasti untuk **poin 3 hingga poin 5**. Informasi terbaru mengenai kelanjutan proses Penyesuaian UKT akan diinformasikan kemudian di website ini.
+
 
 
 Tentang Kami
