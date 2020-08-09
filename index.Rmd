@@ -129,96 +129,13 @@ Berikut adalah **rekapitulasi akhir** pemohon penyesuaian UKT di mana
 - **a10** adalah pengajuan Penurunan UKT bagi Yatim (Formulir Lama)
 - **a11** adalah pengajuan Pembebasan UKT mahasiswa yang akan sidang maksimal 01 Oktober 2020
 
-> **Formulir Baru** berdasarkan Peraturan Rektor Nomor 6 Tahun 2020 
-
->**Formulir Lama** berdasarkan Surat Pemberitahuan nomor T/445/UN43/KU.00.01/2020
+**Formulir Baru** berdasarkan Peraturan Rektor Nomor 6 Tahun 2020, sedangkan **Formulir Lama** berdasarkan Surat Pemberitahuan nomor T/445/UN43/KU.00.01/2020
 
 ```{r, warning=FALSE, message=FALSE}
-library(googlesheets4)
 library(janitor)
 library(tidyr)
 library(kableExtra)
-gs4_deauth()
-## 01 Keringanan
-data <- NULL
-keringanan <- "https://docs.google.com/spreadsheets/d/1e7scNFAYs_4Ly7ZOB9ErB8-53wiRZvgfDMCX-Ig9Wwc/edit?usp=sharing"
-data1 <- data.frame(read_sheet(keringanan))
-data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a01")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-## 02 Pembebasan
-
-pembebasan <- "https://docs.google.com/spreadsheets/d/1WcrUIj25lVAYL2cffvUH1EvC1AZY25HySq3M2FRAA-4/edit?usp=sharing"
-data1 <- data.frame(read_sheet(pembebasan))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a02")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 03 per semester
-
-persemester <- "https://docs.google.com/spreadsheets/d/1Z5flVIcvvwJOf4T_07tFVTs-RBo7Y_f66hqkO4_gGEA/edit?usp=sharing"
-data1 <- data.frame(read_sheet(persemester))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a03")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 04 Permanen
-permanen <- 'https://docs.google.com/spreadsheets/d/13oxZevNQ7YAtmHjO2e30L19B-lln3_TwjW1eq4b7VBs/edit?usp=sharing'
-data1 <- data.frame(read_sheet(permanen))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a04")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 05 Yatim
-yatim <- 'https://docs.google.com/spreadsheets/d/1gk6nmTSkogXJ2jWrXCBEE46u-mdcI4ZhCm4XF9r6Z-I/edit?usp=sharing'
-data1 <- data.frame(read_sheet(yatim))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a05")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 06 Tunda
-tunda <- 'https://docs.google.com/spreadsheets/d/1M6mQXMPoNLcgDPfeL5KBlNFSJSuZ2huXqbhWDbnCdK0/edit?usp=sharing'
-data1 <- data.frame(read_sheet(tunda))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a06")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 01 Tunda lama
-tunda_old <- 'https://docs.google.com/spreadsheets/d/13w0yBo7ajhyPZKaxpmqTmlOd7ogWpeY661jr7lpXD8I/edit?usp=sharing'
-data1 <- data.frame(read_sheet(tunda_old))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan ="a07")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 02 Penyesuaian lama
-penyesuaian <- 'https://docs.google.com/spreadsheets/d/1VUPtlZY1Sf7s5sUjEZuMIndKsKen-2Qa8wtufgFC9hM/edit?usp=sharing'
-data1 <- data.frame(read_sheet(penyesuaian))
-data1 <- data.frame(NIM = data1[,"NIM"], Ajuan = "a08")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 03 Penghasilan Menurun
-drop_inc <- 'https://docs.google.com/spreadsheets/d/1YjUXcWdoZ25YGuCrUsYixM9bKHJ-iAgqqOdQqhOxivg/edit?usp=sharing'
-data1 <- data.frame(read_sheet(drop_inc))
-data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a09")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## 04 Yatim lama
-yatim_old <- 'https://docs.google.com/spreadsheets/d/1mHuUBDqvLihfXnz9QEV0R1_6VxrYXhZIba3hstiPdoU/edit?usp=sharing'
-data1 <- data.frame(read_sheet(yatim_old))
-data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a10")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-## Siap sidang
-sidang <- 'https://docs.google.com/spreadsheets/d/1TX0U83vN9uPdyqZ9EcHl13RdRMmaRVVbO1Lkq5TZRzw/edit?usp=sharing'
-data1 <- data.frame(read_sheet(sidang))
-data1 <- data.frame(NIM = data1[, "NIM"], Ajuan = "a11")
-data1 <- unique(data1)
-data <- rbind(data, data1)
-
-data$jml <- 1
+data <- read.csv("G:/My Drive/# REGISTRASI DAN STATISTIK/UKT/2020/Hasil Verifikasi PNBP/data.csv")
 
 rekap <- data %>%
   pivot_wider(names_from = 'Ajuan', values_from = 'jml', 
@@ -264,16 +181,28 @@ kable(db) %>%
 
 ```
 
-### **Tanggal-Tanggal Penting Proses Penyesuaian UKT**
+Row
+---
 
-1. Batas waktu pengajuan: **17 Juli 2020**
-2. Verifikasi tingkat fakultas: **17 s.d 23 Juli 2020**
-3. Unggah hasil verifikasi di website Untirta: **24 Juli 2020**
-4. Batas waktu pengajuan Keberatan dari mhs: **27 Juli 2020**
-5. Penetapan melalui SK Rektor: **10 Agustus 2020 (maksimum)**
+### Penyesuaian UKT Hasil Verifikasi Fakultas dan PNBP
 
-Diinformasikan bahawa proses penyesuaian UKT mengalami perubahan. Semula batas waktu pengajuan hingga **17 Juli 2020 pukul 16.00** diperpanjang menjadi **17 Juli 2020 pukul 23.59**, sehingga pengiriman data ke Fakultas baru terealisasi pada hari Senin tanggal **20 Juli 2020**. Dengan demikian, belum ada tanggal pasti untuk **poin 3 hingga poin 5**. Informasi terbaru mengenai kelanjutan proses Penyesuaian UKT akan diinformasikan kemudian di website ini.
+Berikut hasil dari Permohonan Penyesuaian UKT Tahun 2020/2021 Semester Ganjil. Hal hal yang perlu diperhatikan :
 
+1. Cek NIM atau Nama Anda (**gunakan search**)
+2. Jika anda merasa perlu untuk mengajukan peninjauan ulang silahkan hubungi Tata Usaha Fakultas/Program Studi dengan menyampaikan alasannya.
+3. Rekomendasi Peninjauan Ulang dikirim ulang oleh Fakultas secara **kolektif (bukan per mahasiswa)** terakhir tanggal **13 Agustus 2020 pukul 14:00**.
+
+
+```{r, warning=FALSE, message=FALSE}
+library(janitor)
+library(readxl)
+library(tidyr)
+library(kableExtra)
+data <- read_excel("G:/My Drive/# REGISTRASI DAN STATISTIK/UKT/2020/Hasil Verifikasi PNBP/publish.xlsx")
+
+DT::datatable(data,
+              rownames = F)
+```
 
 
 Tentang Kami
@@ -298,25 +227,25 @@ Subbagian Registrasi dan Statistik dikoordinasi oleh seorang Kepala Subbagian da
 Row
 ---
 
-### [Munawar Holil, S.E. (Kepala Subbagian)](https://api.whatsapp.com/send?phone=6287771710236){target="_blank"}
+### Munawar Holil, S.E. (Kepala Subbagian)
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/Al Pacino.jpg") 
 ```
  
-### [Sriyanto (Staf)](https://api.whatsapp.com/send?phone=6285888504977){target="_blank"}
+### Sriyanto (Staf)
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/keanu reeves.jpg") 
 ```
 
-### [Riana Hadiana (Staf)](https://api.whatsapp.com/send?phone=628111072357){target="_blank"}
+### Riana Hadiana (Staf)
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/reus.jpg") 
 ```
 
-### [Sri Fuji Astuti (Staf)](https://api.whatsapp.com/send?phone=6287880183029){target="_blank"}
+### Sri Fuji Astuti (Staf)
 
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("image/hijab.jpg") 
