@@ -184,7 +184,7 @@ kable(db) %>%
 Row
 ---
 
-### Penyesuaian UKT Hasil Verifikasi Fakultas dan PNBP
+### **Penyesuaian UKT Hasil Verifikasi Fakultas dan PNBP**
 
 Berikut hasil dari Permohonan Penyesuaian UKT Tahun 2020/2021 Semester Ganjil. Hal hal yang perlu diperhatikan :
 
