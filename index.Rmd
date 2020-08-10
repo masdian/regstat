@@ -191,6 +191,7 @@ Berikut hasil dari Permohonan Penyesuaian UKT Tahun 2020/2021 Semester Ganjil. H
 1. Cek NIM atau Nama Anda (**gunakan search**)
 2. Jika anda merasa perlu untuk mengajukan peninjauan ulang silahkan hubungi Tata Usaha Fakultas/Program Studi dengan menyampaikan alasannya.
 3. Rekomendasi Peninjauan Ulang dikirim ulang oleh Fakultas secara **kolektif (bukan per mahasiswa)** terakhir tanggal **13 Agustus 2020 pukul 14:00**.
+4. Untuk Pembayaran UKT, jika tagihan di Bank belum sesuai tunggu sampai tanggal 13 Agustus 2020.
 
 
 ```{r, warning=FALSE, message=FALSE}
