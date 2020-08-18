@@ -205,6 +205,23 @@ DT::datatable(data,
               rownames = F)
 ```
 
+Row
+---
+
+### **Peninjauan Kembali Penyesuaian UKT**
+
+Berikut hasil dari peninjauan kembali terhadap penyesuaian UKT hasil verifikasi Fakultas dan PNBP. Silakan periksa NIM atau Nama Anda (**gunakan search**).
+
+```{r, warning=FALSE, message=FALSE}
+library(janitor)
+library(readxl)
+library(tidyr)
+library(kableExtra)
+data <- read_excel("G:/My Drive/# REGISTRASI DAN STATISTIK/UKT/2020/Hasil Verifikasi PNBP/publish_banding.xlsx")
+
+DT::datatable(data,
+              rownames = F)
+```
 
 Tentang Kami
 ===
